@@ -1,0 +1,10 @@
+---
+name: site-notifications-config
+---
+
+---
+Only:
+  moduleexists: 'ryanpotter/silverstripe-cms-theme'
+---
+Dynamic\Notifications\Admin\SiteNotificationsAdmin:
+  menu_icon_class: 'far fa-bell'
