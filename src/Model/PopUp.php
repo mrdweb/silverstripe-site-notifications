@@ -33,22 +33,22 @@ class PopUp extends DataObject
      * @var array
      */
     private static $has_one = [
-        'Image' => Image::class,
-        'ContentLink' => Link::class,
+        //'Image' => Image::class,
+        //'ContentLink' => Link::class,
     ];
 
     /**
      * @var array
      */
     private static $owns = [
-        'Image',
+        //'Image',
     ];
 
     /**
      * @var array
      */
     private static $summary_fields = [
-        'Image.CMSThumbnail' => 'Image',
+        //'Image.CMSThumbnail' => 'Image',
         'Title' => 'Title',
         'StartTime.Nice' => 'Starts',
         'EndTime.Nice' => 'Ends',
@@ -76,15 +76,19 @@ class PopUp extends DataObject
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
 
+/*
             $fields->dataFieldByName('Image')
                 ->setAllowedFileCategories('image')
                 ->setFolderName('Uploads/Notifications/PopUp')
                 ->setIsMultiUpload(false);
+*/
 
+/*
             $fields->replaceField(
                 'ContentLinkID',
                 LinkField::create('ContentLinkID', 'Content Link')
             );
+*/
 
             $fields->dataFieldByName('Content')
                 ->setRows(5);
@@ -102,8 +106,8 @@ class PopUp extends DataObject
                 [
                     $fields->dataFieldByName('StartTime'),
                     $fields->dataFieldByName('EndTime'),
-                    $fields->dataFieldByName('Image'),
-                    $fields->dataFieldByName('ContentLinkID'),
+                    //$fields->dataFieldByName('Image'),
+                    //$fields->dataFieldByName('ContentLinkID'),
                 ],
                 'Content'
             );
