@@ -28,13 +28,13 @@ class SiteTreeDataExtension extends DataExtension
     /**
      * @return DataList
      */
-    public function getViolators()
-    {
-        $list = Violator::get()->filter([
-            'StartTime:LessThanOrEqual' => date("Y-m-d H:i:s", strtotime('now')),
-            'EndTime:GreaterThanOrEqual' => date("Y-m-d H:i:s", strtotime('now')),
-        ]);
+    // public function getViolators()
+    // {
+    //     $list = Violator::get()->filter([
+    //         'StartTime:LessThanOrEqual' => date("Y-m-d H:i:s", strtotime('now')),
+    //         'EndTime:GreaterThanOrEqual' => date("Y-m-d H:i:s", strtotime('now')),
+    //     ]);
 
-        return $list->sort('Sort');
-    }
+    //     return $list->sort('Sort');
+    // }
 }
