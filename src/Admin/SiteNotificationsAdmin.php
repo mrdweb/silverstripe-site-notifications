@@ -1,9 +1,9 @@
 <?php
 
-namespace Dynamic\Notifications\Admin;
+namespace MRD\Notifications\Admin;
 
-use Dynamic\Notifications\Model\PopUp;
-use Dynamic\Notifications\Model\Violator;
+use MRD\Notifications\Model\PopUp;
+//use MRD\Notifications\Model\Violator;
 use SilverStripe\Admin\ModelAdmin;
 
 /**
@@ -23,10 +23,20 @@ class SiteNotificationsAdmin extends ModelAdmin
     private static $menu_title = 'Site Notifications';
 
     /**
+     * @var string
+     */
+    private static $menu_priority = 1;
+
+    /**
+     * @var string
+     */
+    private static $menu_icon_class = 'font-icon-attention-1';
+
+    /**
      * @var array
      */
     private static $managed_models = [
-        Violator::class,
+        //Violator::class,
         PopUp::class,
     ];
 
