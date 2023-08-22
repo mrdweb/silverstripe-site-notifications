@@ -1,10 +1,12 @@
 <?php
 
-namespace MRD\Notifications\Admin;
+namespace Dynamic\Notifications\Admin;
 
-use MRD\Notifications\Model\PopUp;
+use Dynamic\Notifications\Model\PopUp;
 //use MRD\Notifications\Model\Violator;
 use SilverStripe\Admin\ModelAdmin;
+use SilverStripe\Forms\GridField\GridField;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
  * Class SiteNotificationsAdmin
@@ -15,7 +17,7 @@ class SiteNotificationsAdmin extends ModelAdmin
     /**
      * @var string
      */
-    private static $url_segment = 'notificatiopns-admin';
+    private static $url_segment = 'notifications-admin';
 
     /**
      * @var string
