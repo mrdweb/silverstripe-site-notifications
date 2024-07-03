@@ -3,7 +3,7 @@
 namespace Dynamic\Notifications\Admin;
 
 use Dynamic\Notifications\Model\PopUp;
-//use MRD\Notifications\Model\Violator;
+use Dynamic\Notifications\Model\Violator;
 use SilverStripe\Admin\ModelAdmin;
 use SilverStripe\Forms\GridField\GridField;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
